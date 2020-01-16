@@ -2,7 +2,7 @@
 _exercise for neural networks course at cse-uoi, winter 2019_
 (http://www.cs.uoi.gr/)
 
-Multi-Layered-Perceptron implementation and training, written in Java.
+Multilayer-Perceptron implementation and training, written in Java.
 
 2 hidden layers, easily customizable.
 
