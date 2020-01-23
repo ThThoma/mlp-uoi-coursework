@@ -1,3 +1,5 @@
+package MLP2019;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
@@ -11,9 +13,9 @@ public class MultiLayerPerceptron {
 	public static final int K = 3;
 	public static final int H1 = 8;
 	public static final int H2 = 5;
-	public static final double EDU_RATE = 0.0001;
+	public static final double EDU_RATE = 0.001;
 	public static final String typeOfFunctionInH2 = "tanh";
-	public static final int L = 1;
+	public static final int L = 300;
 	private  Cdata[] educationSet;
 	private  Cdata[] testSet;
 	private NeuronHiddenLayer1[] neuronsH1;
@@ -408,6 +410,7 @@ public class MultiLayerPerceptron {
 					backPropagation(educationSet[j]);
 				}
 				updateAllWeights();
+				clearAllDerivatives();
 			}
 			
 			printErrorOfEpoch();
